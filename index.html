@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>后台主页_Second</title>
+    <!-- 导入 layui 的 css 文件 -->
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css" />
     <!-- 引入第三方图标库  -->
     <link rel="stylesheet" href="./assets/fonts/iconfont.css">
     <!-- 引入 自己 的 css 文件 -->
@@ -22,8 +24,9 @@
             <!-- 水平导航 -->
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
-                    <a href="javascript:;">
+                    <a href="javascript:;" class="userinfo">
                         <img src="./assets/images/sample.jpg" class="layui-nav-img" />
+                        <span class="text-avatar">A</span>
                         个人中心
                     </a>
                     <dl class="layui-nav-child">
@@ -32,16 +35,24 @@
                         <dd><a href="">重置密码</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href=""><span class="iconfont icon-tuichu"></span>退出</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" id="btnLogout"><span class="iconfont icon-tuichu"></span>退出</a>
+                </li>
             </ul>
         </div>
         <!-- 侧边栏 -->
         <div class="layui-side layui-bg-black">
             <div class="layui-side-scroll">
                 <!-- 垂直导航 -->
+                <!-- 左侧侧边栏上面头像 -->
+                <div class="userinfo">
+                    <img src="./assets/images/sample2.jpg" class="layui-nav-img" />
+                    <span class="text-avatar">A</span>
+                    <span id="welcome">欢迎 ***</span>
+                </div>
                 <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink="all">
-                    <li class="layui-nav-item">
-                        <a href="/"><span class="iconfont icon-home"></span>首页</a>
+                    <li class="layui-nav-item layui-this">
+                        <a href="/home/dashboard.html" target="fm"><span class="iconfont icon-home"></span>首页</a>
                     </li>
                     <li class="layui-nav-item">
                         <a class="" href="javascript:;"><span class="iconfont icon-16"></span>文章管理</a>
@@ -76,11 +87,20 @@
         </div>
         <!-- 主体内容 -->
         <div class="layui-body">
-            <div style="padding: 15px;">内容主体区域</div>
+            <!-- 内容主体区域 -->
+            <iframe name="fm" src="./home/dashboard.html" frameborder="0"></iframe>
         </div>
         <!-- 底部 -->
         <div class="layui-footer"> © layui.com - 底部固定区域</div>
     </div>
+    <!-- 导入 layui 的 js 文件 -->
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <!-- 导入 jQuery 的 js 文件 -->
+    <script src="./assets/lib/jQuery.js"></script>
+    <!-- 导入 baseAPI 的 js 文件 -->
+    <script src="./assets/js/baseAPI.js"></script>
+    <!-- 导入 自己 的 js 文件 -->
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>

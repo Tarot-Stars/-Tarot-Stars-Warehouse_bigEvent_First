@@ -23,7 +23,7 @@ $(function () {
     // 发送 Ajax 请求
     var layer = layui.layer;
     // 登录框
-    $('#form_login').submit(function (e) {
+    $('#form_login').on('submit', function (e) {
         // 阻止表单的默认提交行为
         e.preventDefault();
         $.ajax({
@@ -60,5 +60,5 @@ $(function () {
             }
         })
     });
-    
+
 })
