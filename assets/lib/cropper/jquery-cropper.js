@@ -9,7 +9,7 @@
  */
 
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('jquery'), require('cropperjs')) :
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('./node_modules/jquery'), require('./node_modules/cropperjs')) :
   typeof define === 'function' && define.amd ? define(['jquery', 'cropperjs'], factory) :
   (global = global || self, factory(global.jQuery, global.Cropper));
 }(this, function ($, Cropper) { 'use strict';
