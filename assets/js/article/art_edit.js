@@ -90,6 +90,7 @@ $(function () {
             }
         })
     }
+    // 渲染获取到的文章信息
     function initForm() {
         // 获取到 ID 值
         var id = location.search.split('=')[1];
@@ -97,7 +98,7 @@ $(function () {
             method: 'GET',
             url: '/my/article/' + id,
             success: function (res) {
-                if (res.status !== 0) return layer.msg(res.message);
+                if (res.status !== 0) return layer.msg('请选择图片');
                 form.val('form-edit', res.data);
                 //  tinymce 赋值
                 tinyMCE.activeEditor.setContent(res.data.content);
