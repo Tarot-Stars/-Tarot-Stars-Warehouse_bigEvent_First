@@ -98,7 +98,7 @@ $(function () {
             method: 'GET',
             url: '/my/article/' + id,
             success: function (res) {
-                if (res.status !== 0) return layer.msg('请选择图片');
+                if (res.status !== 0) return layer.msg('请选择文件');
                 form.val('form-edit', res.data);
                 //  tinymce 赋值
                 tinyMCE.activeEditor.setContent(res.data.content);
